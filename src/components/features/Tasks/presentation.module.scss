@@ -1,0 +1,106 @@
+@use '../../../styles/theme' as theme;
+
+.tasks {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.form {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.entry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  input {
+    flex: 1 1 12rem;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.error {
+  padding: 0.875rem;
+  border: 1px solid theme.$danger;
+  border-radius: 0.5rem;
+  background: theme.$danger-background;
+  color: theme.$danger;
+}
+
+.status {
+  min-height: 1.5em;
+  color: theme.$muted;
+}
+
+.empty {
+  padding: 1.5rem;
+  border: 1px dashed theme.$border;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid theme.$soft-border;
+  border-radius: 0.75rem;
+  background: theme.$surface;
+}
+
+.taskLabel {
+  display: flex;
+  flex: 1 1 14rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  cursor: pointer;
+
+  input {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: theme.$primary;
+  }
+
+  span:first-of-type {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.completed {
+  color: theme.$muted;
+  text-decoration: line-through;
+}
+
+.badge {
+  color: theme.$muted;
+  font-size: 0.875rem;
+}
+
+.delete {
+  border-color: theme.$danger;
+  background: theme.$surface;
+  color: theme.$danger;
+
+  &:hover {
+    background: theme.$danger-background;
+  }
+}
